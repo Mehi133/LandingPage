@@ -1,0 +1,8 @@
+
+project_id = "gtupuqdengqiutgipeik"
+
+[functions.Lovable-N8n-Test]
+verify_jwt = false
+
+[functions.webhook-callback]
+verify_jwt = false

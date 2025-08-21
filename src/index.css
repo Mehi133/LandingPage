@@ -1,0 +1,111 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Professional Warm Palette */
+    --background: 0 0% 99%;                   /* Warm white */
+    --background-secondary: 20 10% 97%;       /* Warm gray background */
+    --foreground: 220 13% 15%;                /* Deep blue-gray text */
+    --secondary-foreground: 220 9% 46%;       /* Medium warm gray text */
+    --primary: 200 98% 39%;                   /* Professional blue accent */
+    --primary-foreground: 0 0% 98%;           /* Light text on primary */
+    --accent: 200 98% 39%;                    /* Same as primary for consistency */
+    --accent-foreground: 0 0% 98%;            /* Light text on accent */
+    --success: 142 71% 45%;                   /* Professional green */
+    --card: 0 0% 100%;                        /* Pure white cards */
+    --card-foreground: 220 13% 15%;           /* Dark text on cards */
+    --border: 220 13% 91%;                    /* Warm light borders */
+    --input: 20 10% 96%;                      /* Warm input backgrounds */
+    --ring: 200 98% 39%;                      /* Focus ring matches primary */
+    --radius: 8px;                            /* Slightly more rounded */
+    --muted: 20 10% 95%;                      /* Warm muted background */
+    --muted-foreground: 220 9% 46%;           /* Muted text */
+
+    /* Sidebar variables */
+    --sidebar-background: 20 10% 97%;
+    --sidebar-foreground: 220 13% 15%;
+    --sidebar-border: 220 13% 91%;
+  }
+
+  .dark {
+    /* Dark Theme: Warm Professional Palette */
+    --background: 220 13% 9%;                 /* Warm dark background */
+    --background-secondary: 220 13% 11%;      /* Slightly lighter background */
+    --foreground: 20 10% 97%;                 /* Warm light text */
+    --secondary-foreground: 220 9% 65%;       /* Medium gray text */
+    --primary: 200 98% 60%;                   /* Lighter blue for dark mode */
+    --primary-foreground: 220 13% 9%;         /* Dark text on primary */
+    --accent: 200 98% 60%;                    /* Same as primary */
+    --accent-foreground: 220 13% 9%;          /* Dark text on accent */
+    --success: 142 71% 45%;                   /* Same green */
+    --card: 220 13% 11%;                      /* Dark cards */
+    --card-foreground: 20 10% 97%;            /* Light text on cards */
+    --border: 220 13% 20%;                    /* Dark borders */
+    --input: 220 13% 15%;                     /* Dark input backgrounds */
+    --ring: 200 98% 60%;                      /* Light focus ring */
+    --muted: 220 13% 15%;                     /* Dark muted */
+    --muted-foreground: 220 9% 65%;           /* Muted text */
+
+    --sidebar-background: 220 13% 11%;
+    --sidebar-foreground: 20 10% 97%;
+    --sidebar-border: 220 13% 20%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  
+  /* Professional Typography Scale */
+  h1 {
+    @apply text-xl font-semibold leading-tight;
+  }
+  h2 {
+    @apply text-lg font-semibold leading-tight;
+  }
+  h3 {
+    @apply text-base font-semibold leading-tight;
+  }
+  h4 {
+    @apply text-sm font-semibold leading-tight;
+  }
+  
+  /* Report-specific layout classes */
+  .report-container {
+    @apply w-full max-w-[1600px] mx-auto;
+  }
+  
+  .report-grid {
+    @apply grid grid-cols-1 lg:grid-cols-12 gap-6;
+  }
+  
+  .report-sidebar {
+    @apply lg:col-span-3;
+  }
+  
+  .report-main {
+    @apply lg:col-span-6;
+  }
+  
+  .report-aside {
+    @apply lg:col-span-3;
+  }
+  
+  /* Chart styling */
+  .chart-container {
+    @apply bg-card border border-border rounded-lg p-4 shadow-sm;
+  }
+}
+
+/* Import Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
